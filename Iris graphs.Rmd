@@ -15,7 +15,10 @@ library(tidyverse)
 
 ```{r}
 iris_plot <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +
-  geom_point()
+  geom_point(aes(color = Species)) +
+  facet_wrap(~Species) +
+  theme_classic() +
+  labs(x = "Petal Length Test Label", y = "Petal Width Example Label")
 
 iris_plot
 ```
