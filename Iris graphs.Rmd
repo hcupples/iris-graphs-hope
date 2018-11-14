@@ -1,0 +1,22 @@
+---
+title: "Iris Graphs"
+author: "HC"
+date: "November 13, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+iris
+View(iris)
+library(tidyverse)
+```
+
+```{r}
+iris_plot <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +
+  geom_point()
+
+iris_plot
+```
+
